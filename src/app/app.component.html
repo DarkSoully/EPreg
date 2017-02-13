@@ -1,0 +1,77 @@
+<h1 style="color: blue">
+  {{title}}
+</h1>
+<select #languages>
+  <option value="english">English</option>
+  <option value="duits">Duits</option>
+</select>
+<button (click)="taal(languages.value);">Go</button>
+<div style="background: cornflowerblue; color: white" >
+  Beste mevrouw,
+  <p>
+    Deze vragenlijst werd opgesteld om uw gezondheidstoestand beter te kennen voor opname. Het laat ons toe zicht te krijgen op belangrijke aspecten over uzelf,
+    zodat we u een optimale behandeling en zorg kunnen bieden.
+    <br>
+    Breng steeds uw <b>MOEDERBOEKJE</b> of <b>GEGEVENS VAN UW ARTS</b> mee bij opname, het wordt dan met u overlopen.
+    De informatie wordt uiteraard vertrouwelijk behandeld.
+  </p>
+</div>
+
+<div>
+  <table>
+
+    <th>
+      U kan deze <b>Vragenlijst</b> zelf invullen of met <b> behulp van uw specialist </b> of <b>huisarts</b>.
+    </th>
+
+      <tr >
+        <div class="QuestionDiv">
+      {{vraag2[0].vraag}}  || {{nederlands[0].vraag}}
+        </div>
+    </tr>
+
+
+      <tr >
+        <div class="answerDiv">
+        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord1}}">{{vraag2[0].antwoord1}} || {{nederlands[0].antwoord1}}
+        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord2}}"> {{vraag2[0].antwoord2}} || {{nederlands[0].antwoord2}}
+        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord3}}"> {{vraag2[0].antwoord3}} || {{nederlands[0].antwoord3}}
+          <br>
+        </div>
+      </tr>
+    <tr>
+      <div class="QuestionDiv">
+      {{vraag2[1].vraag}}  ||  ({{nederlands[1].vraag}})
+      </div>
+    </tr>
+    <tr>
+      <div class="answerDiv">
+
+      <i><input type="radio" name="vraag2" value="{{vraag2[1].antwoord1}}">{{vraag2[1].antwoord1}} || {{nederlands[1].antwoord1}}</i>
+      <input type="radio" name="vraag2" value="{{vraag2[1].antwoord2}}"> {{vraag2[1].antwoord2}} || {{nederlands[1].antwoord2}}
+        <br>
+      </div>
+    </tr>
+    <tr>
+      <div class="QuestionDiv">
+      {{vraag2[2].vraag}}  ||  ({{nederlands[2].vraag}})
+      </div>
+    </tr>
+    <tr>
+      <div class="answerDiv">
+        <select>
+          <option>
+            {{nederlands[2].antwoord1}}
+          </option>
+          <option>
+            {{nederlands[2].antwoord2}} || {{vraag2[2].antwoord1}}
+
+          </option>
+        </select>
+      <input type="radio" name="vraag3" value="{{vraag2[2].antwoord1}}">{{vraag2[2].antwoord1}} || {{nederlands[2].antwoord1}}
+      <input type="radio" name="vraag3" value="{{vraag2[2].antwoord2}}"> {{vraag2[2].antwoord2}} || {{nederlands[2].antwoord2}}
+        <br>
+      </div>
+    </tr>
+  </table>
+</div>
