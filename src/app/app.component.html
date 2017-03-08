@@ -6,72 +6,1047 @@
   <option value="duits">Duits</option>
 </select>
 <button (click)="taal(languages.value);">Go</button>
-<div style="background: cornflowerblue; color: white" >
-  Beste mevrouw,
-  <p>
-    Deze vragenlijst werd opgesteld om uw gezondheidstoestand beter te kennen voor opname. Het laat ons toe zicht te krijgen op belangrijke aspecten over uzelf,
-    zodat we u een optimale behandeling en zorg kunnen bieden.
-    <br>
-    Breng steeds uw <b>MOEDERBOEKJE</b> of <b>GEGEVENS VAN UW ARTS</b> mee bij opname, het wordt dan met u overlopen.
-    De informatie wordt uiteraard vertrouwelijk behandeld.
-  </p>
-</div>
+<div class="bodydiv row" id="everything">
+  <div class="col-md-12 inleiding">
+    <table id="rcorners1">
+      <tr>
+        <td class="maintr">
+          Beste mevrouw,
+          <p>
 
-<div>
-  <table>
+            Deze vragenlijst werd opgesteld om uw gezondheidstoestand beter te kennen voor opname. Het laat ons toe
+            zicht te
 
-    <th>
-      U kan deze <b>Vragenlijst</b> zelf invullen of met <b> behulp van uw specialist </b> of <b>huisarts</b>.
-    </th>
+            krijgen op belangrijke aspecten over uzelf,
 
-      <tr >
-        <div class="QuestionDiv">
-      {{vraag2[0].vraag}}  || {{nederlands[0].vraag}}
-        </div>
-    </tr>
+            zodat we u een optimale behandeling en zorg kunnen bieden.
 
+            <br>
 
-      <tr >
-        <div class="answerDiv">
-        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord1}}">{{vraag2[0].antwoord1}} || {{nederlands[0].antwoord1}}
-        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord2}}"> {{vraag2[0].antwoord2}} || {{nederlands[0].antwoord2}}
-        <input type="radio" name="vraag1" value="{{vraag2[0].antwoord3}}"> {{vraag2[0].antwoord3}} || {{nederlands[0].antwoord3}}
-          <br>
-        </div>
+            Breng steeds uw <b>MOEDERBOEKJE</b> of <b>GEGEVENS VAN UW ARTS</b> mee bij opname, het wordt dan met u
+
+            overlopen.
+
+            De informatie wordt uiteraard vertrouwelijk behandeld.
+
+          </p>
+        </td>
       </tr>
-    <tr>
-      <div class="QuestionDiv">
-      {{vraag2[1].vraag}}  ||  ({{nederlands[1].vraag}})
-      </div>
-    </tr>
-    <tr>
-      <div class="answerDiv">
+    </table>
+  </div>
+  <div class="col-md-10">
+    <div>
+      <table class="table table-responsive">
+        <th class="thheader">
+          U kan deze <b>Vragenlijst</b> zelf invullen of met <b> behulp van uw specialist </b> of <b>huisarts</b>.
+        </th>
+        <tbody class="mainbody">
 
-      <i><input type="radio" name="vraag2" value="{{vraag2[1].antwoord1}}">{{vraag2[1].antwoord1}} || {{nederlands[1].antwoord1}}</i>
-      <input type="radio" name="vraag2" value="{{vraag2[1].antwoord2}}"> {{vraag2[1].antwoord2}} || {{nederlands[1].antwoord2}}
-        <br>
-      </div>
-    </tr>
-    <tr>
-      <div class="QuestionDiv">
-      {{vraag2[2].vraag}}  ||  ({{nederlands[2].vraag}})
-      </div>
-    </tr>
-    <tr>
-      <div class="answerDiv">
-        <select>
-          <option>
-            {{nederlands[2].antwoord1}}
-          </option>
-          <option>
-            {{nederlands[2].antwoord2}} || {{vraag2[2].antwoord1}}
 
-          </option>
-        </select>
-      <input type="radio" name="vraag3" value="{{vraag2[2].antwoord1}}">{{vraag2[2].antwoord1}} || {{nederlands[2].antwoord1}}
-      <input type="radio" name="vraag3" value="{{vraag2[2].antwoord2}}"> {{vraag2[2].antwoord2}} || {{nederlands[2].antwoord2}}
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[0].vraag1}} || {{nederlands[0].vraag1}}
+          </div>
+        </tr>
+
+
+        <tr>
+          <div class="answerDiv">
+            <select>
+              <option>{{vraag2[0].antwoord1}} || {{nederlandsantwoord.vraag1.antwoord1}}</option>
+              <option>{{vraag2[0].antwoord2}} || {{nederlandsantwoord.vraag1.antwoord2}}</option>
+              <option>{{vraag2[0].antwoord3}} || {{nederlandsantwoord.vraag1.antwoord3}}</option>
+            </select>
+            <br>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[1].vraag2}} || ({{nederlands[1].vraag2}})
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <select>
+              <option>{{vraag2[1].antwoord1}} || {{nederlandsantwoord.vraag2.antwoord1}}</option>
+              <option>{{vraag2[1].antwoord2}} || {{nederlandsantwoord.vraag2.antwoord2}}</option>
+            </select>
+            <br>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[2].vraag3}} || ({{nederlands[2].vraag3}})
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <select>
+              <option>{{vraag2[2].antwoord1}} || {{nederlandsantwoord.vraag3.antwoord1}}</option>
+              <option>{{vraag2[2].antwoord2}} || {{nederlandsantwoord.vraag3.antwoord2}}</option>
+            </select>
+            <br>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[3].vraag4}} || ({{nederlands[3].vraag4}})
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <select>
+              <option>{{vraag2[3].antwoord1}} || {{nederlandsantwoord.vraag4.antwoord1}}</option>
+              <option>{{vraag2[3].antwoord2}} || {{nederlandsantwoord.vraag4.antwoord2}}</option>
+              <option>{{vraag2[3].antwoord3}} || {{nederlandsantwoord.vraag4.antwoord3 }}</option>
+            </select>
+            <br>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[4].vraag5}} || ({{nederlands[4].vraag5}})
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <label>{{vraag2[4].vraag1.vraag1}} || {{nederlands[4].vraag1}}</label>
+            <input type="text">
+            <br>
+            <label>{{vraag2[4].vraag2.vraag1}} || {{nederlands[4].vraag2}}</label>
+            <input type="text">
+            <br>
+            <label>{{vraag2[4].vraag3.vraag1}} || {{nederlands[4].vraag3}}</label>
+            <select>
+              <option>{{vraag2[4].vraag3.antwoord1}} || {{nederlandsantwoord.vraag5.antwoord3 }}</option>
+              <option>{{vraag2[4].vraag3.antwoord2}} || {{nederlandsantwoord.vraag5.antwoord4 }}</option>
+              <option>{{vraag2[4].vraag3.antwoord3}} || {{nederlandsantwoord.vraag5.antwoord5 }}</option>
+              <option>{{vraag2[4].vraag3.antwoord4}} || {{nederlandsantwoord.vraag5.antwoord6 }}</option>
+            </select>
+            <br>
+            <label>{{vraag2[4].vraag4.vraag1}} || {{nederlands[4].vraag4.vraag1}}</label>
+            <select>
+              <option>{{vraag2[4].vraag4.antwoord1}} || {{nederlandsantwoord.vraag5.antwoord7 }}</option>
+              <option>{{vraag2[4].vraag4.antwoord2}} || {{nederlandsantwoord.vraag5.antwoord8 }}</option>
+            </select>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            Vorige Bevallingen
+          </div>
+          <div class="answerDiv">
+            <table class="tableintable">
+              <thead class="bevallingen">
+              <th>
+                datum
+              </th>
+              <th>
+                Geboorte gewicht
+              </th>
+              <th>
+                Vaginale bevalling of keizesnede
+              </th>
+              <th>
+                Epidurale
+              </th>
+              <th>
+                Bijzonderheden tijden zwangerschap/bevalling/kraambed
+              </th>
+              </thead>
+              <tbody class="tableintablebody">
+              <tr>
+                <td>
+                  <input type="text" maxlength="2" style="width: 30px">/ <input type="text" maxlength="2"
+                                                                                style="width: 30px">/20<input
+                  type="text" maxlength="2" style="width: 30px">
+                </td>
+                <td>
+                  <input type="text" maxlength="4" style="width: 60px;"> kg
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" style="width: 95%;">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" maxlength="2" style="width: 30px">/ <input type="text" maxlength="2"
+                                                                                style="width: 30px">/20<input
+                  type="text" maxlength="2" style="width: 30px">
+                </td>
+                <td>
+                  <input type="text" maxlength="4" style="width: 60px;"> kg
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" style="width: 95%;">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" maxlength="2" style="width: 30px">/ <input type="text" maxlength="2"
+                                                                                style="width: 30px">/20<input
+                  type="text" maxlength="2" style="width: 30px">
+                </td>
+                <td>
+                  <input type="text" maxlength="4" style="width: 60px;"> kg
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" style="width: 95%;">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" maxlength="2" style="width: 30px">/ <input type="text" maxlength="2"
+                                                                                style="width: 30px">/20<input
+                  type="text" maxlength="2" style="width: 30px">
+                </td>
+                <td>
+                  <input type="text" maxlength="4" style="width: 60px;"> kg
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" style="width: 95%;">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" maxlength="2" style="width: 30px">/ <input type="text" maxlength="2"
+                                                                                style="width: 30px">/20<input
+                  type="text" maxlength="2" style="width: 30px">
+                </td>
+                <td>
+                  <input type="text" maxlength="4" style="width: 60px;"> kg
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord3b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <select>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4a}}</option>
+                    <option>{{nederlands[5].vorigeBevalling.antwoord4b}}</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" style="width: 95%;">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[6].vraag7}} || {{nederlands[6].vraag7}}
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <table>
+              <tr>
+                <td>
+                  {{vraag2[6].vraag1}} || {{nederlands[6].vraag1}}:
+                </td>
+                <td>
+                  <input type="text" style="width: 300px">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[6].vraag2}} || {{nederlands[6].vraag2}}:
+                </td>
+                <td>
+                  <input type="text" style="width: 300px">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[6].vraag3}} || {{nederlands[6].vraag3}}:
+                </td>
+                <td>
+                  <input type="text" style="width: 300px">
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[7].vraag8}} || {{nederlands[7].vraag8}}
+          </div>
+        </tr>
+        <tr>
+          <div class="answerDiv">
+            <table>
+              <tr>
+                <td>
+                  {{vraag2[7].vraag1.vraag1}} || {{nederlands[7].vraag1}}
+                </td>
+                <td>
+                  <select>
+                    <option>Ja, welke</option>
+                    <option>Neen</option>
+                  </select>
+                  <input type="text">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[7].vraag2}} || {{nederlands[7].vraag2}}
+                </td>
+                <td>
+                  <select>
+                    <option>Ja, datum</option>
+                    <option>Neen</option>
+                  </select>
+                  <input type="text">
+                </td>
+              </tr>
+            </table>
+          </div>
+        </tr>
+        <div class="QuestionDiv">
+          <tr>
+            {{vraag2[8].vraag9}} || {{nederlands[8].vraag9}}
+          </tr>
+        </div>
+        <tr>
+          <table>
+            <div class="answerDiv">
+              <tr>
+                <td>
+                  {{vraag2[8].vraag1.vraag1}} || {{nederlands[8].vraag1}}
+                </td>
+                <td>
+                  voor de zwangerschap: <input type="text" id="voorzwagKg"> kg
+                </td>
+                <td>
+                  huidig gewicht: <input type="text" id="Kg"> kg
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[8].vraag2.vraag1}} || {{nederlands[8].vraag2}}
+                </td>
+                <td>
+                  <input type="text" id="lengte"> m
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[8].vraag3.vraag1}} || {{nederlands[8].vraag3}}
+                </td>
+                <td>
+                  voor de zwangerschap: <input type="text" id="bloeddrukVoor">
+                </td>
+                <td>
+                  tijdens de zwangerschap: <input type="text" id="BloeddrukTijdens">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[8].vraag4.vraag1}} || {{nederlands[8].vraag4}}
+                </td>
+                <td>
+                  <input type="text" id="polsfrequentie">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {{vraag2[8].vraag5.vraag1}} || {{nederlands[8].vraag5}}
+                </td>
+                <td>
+                  <input type="text" id="glycemie">
+                </td>
+              </tr>
+            </div>
+          </table>
+        </tr>
+        <tr>
+          <div class="QuestionDiv">
+            {{vraag2[9].vraag10.vraag1}} || {{nederlands[9].vraag10.vraag1}}
+          </div>
+        </tr>
+        <div class="answerDiv" *ngIf="!allergiecheck">
+          <tr>
+            <td>
+              <select>
+                <option>ja</option>
+                <option>neen</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="penicilline">{{vraag2[9].vraag10.antwoord1}} ||
+              {{nederlands[9].vraag10.antwoord1}},<input type="checkbox" id="andereAllergieCheck"> andere medicatie:
+              <input type="text" id="andereallergieInput">
+            </td>
+          </tr>
+
+          <tr>
+            <input type="checkbox" id="contraststof">{{vraag2[9].vraag10.antwoord3}} ||
+            {{nederlands[9].vraag10.antwoord3}}, <input type="checkbox" id="kleefpleister">{{vraag2[9].vraag10.antwoord4}}
+            || {{nederlands[9].vraag10.antwoord4}}, <input type="checkbox" id="jodium">{{vraag2[9].vraag10.antwoord5}}
+            ||
+            {{nederlands[9].vraag10.antwoord5}}, <input type="checkbox" id="latex">{{vraag2[9].vraag10.antwoord6}} ||
+            {{nederlands[9].vraag10.antwoord6}}
+          </tr>
+          <tr>
+            <input type="checkbox" id="nikkel">{{vraag2[9].vraag10.antwoord7}} || {{nederlands[9].vraag10.antwoord7}},
+            <input type="checkbox" id="pijnstillers">{{vraag2[9].vraag10.antwoord8}} ||
+            {{nederlands[9].vraag10.antwoord8}}, <input type="checkbox" id="plaatselijkeverdoving">{{vraag2[9].vraag10.antwoord9}}
+            || {{nederlands[9].vraag10.antwoord9}}
+          </tr>
+          <p>
+            <tr>
+              <td>
+                {{vraag2[9].vraag2.vraag1}} || {{nederlands[9].vraag2.vraag1}} <input type="checkbox" id="flauwvallen">
+                {{vraag2[9].vraag2.antwoord1}} || {{nederlands[9].vraag2.antwoord1}}, <input type="checkbox"
+                                                                                             id="zwelling">
+                {{vraag2[9].vraag2.antwoord2}} || {{nederlands[9].vraag2.antwoord2}},
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="ademnood"> {{vraag2[9].vraag2.antwoord3}} ||
+                {{nederlands[9].vraag2.antwoord3}}, <input type="checkbox" id="piepende ademhaling">
+                {{vraag2[9].vraag2.antwoord4}} || {{nederlands[9].vraag2.antwoord4}}, <input type="checkbox"
+                                                                                             id="rodevlekken">
+                {{vraag2[9].vraag2.antwoord5}} || {{nederlands[9].vraag2.antwoord5}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="rodevlekkenjeuk"> {{vraag2[9].vraag2.antwoord6}} ||
+                {{nederlands[9].vraag2.antwoord6}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="andereallergie"> Andere: andere huidafwijkingen,koorts, <input type="text"
+                                                                                                          id="andereallergietext">
+              </td>
+            </tr>
+          </p>
+          <tr>
+            {{vraag2[9].vraag3.vraag1}} || {{nederlands[9].vraag3.vraag1}}
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="zeersnel"> {{vraag2[9].vraag3.antwoord1}} ||
+              {{nederlands[9].vraag3.antwoord1}},
+              <input type="checkbox" id="gemiddeld"> {{vraag2[9].vraag3.antwoord2}} ||
+              {{nederlands[9].vraag3.antwoord2}},
+              <input type="checkbox" id="langzaam"> {{vraag2[9].vraag3.antwoord3}} || {{nederlands[9].vraag3.antwoord3}}
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            {{vraag2[10].vraag11}} || {{nederlands[10].vraag11}}
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              Naam: <input type="text" id="naam1">
+            </td>
+            <td>
+              tel.: <input type="text" id="tel1">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Naam: <input type="text" id="naam2">
+            </td>
+            <td>
+              tel.: <input type="text" id="tel2">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Naam: <input type="text" id="naam3">
+            </td>
+            <td>
+              tel.: <input type="text" id="tel3">
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            <td>
+              {{vraag2[11].vraag12}} || {{nederlands[11].vraag12}}
+            </td>
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              {{vraag2[11].vraag1.vraag1}} || {{nederlands[11].vraag1.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[11].vraag1.antwoord1}} || {{nederlands[11].vraag1.antwoord1}}</option>
+                <option>{{vraag2[11].vraag1.antwoord2}} || {{nederlands[11].vraag1.antwoord2}}</option>
+                <option>{{vraag2[11].vraag1.antwoord3}} || {{nederlands[11].vraag1.antwoord3}}</option>
+              </select>
+              <input type="text" id="woonvorm">
+            </td>
+          </tr>
+          <tr>
+            <input type="checkbox" id="trappen"> {{vraag2[11].vraag2.vraag1}} || {{nederlands[11].vraag2.vraag1}}
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[11].vraag3.vraag1}} || {{nederlands[11].vraag3.vraag1}} <input type="text" id="ondersteuning">
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            <td>
+              {{vraag2[12].vraag13}} || {{nederlands[12].vraag13}}
+            </td>
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              <input type="checkbox" id="algemeenToepassing"> Niet van toepassing
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[12].vraag1.vraag1}} || {{nederlands[12].vraag1.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[12].vraag1.antwoord1}} || {{nederlands[12].vraag1.antwoord1}}</option>
+                <option>{{vraag2[12].vraag1.antwoord2}} || {{nederlands[12].vraag1.antwoord2}}</option>
+                <option>{{vraag2[12].vraag1.antwoord3}} || {{nederlands[12].vraag1.antwoord3}}</option>
+              </select>
+              <input type="text" id="roken">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[12].vraag2.vraag1}} || {{nederlands[12].vraag2.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[12].vraag2.antwoord1}} || {{nederlands[12].vraag2.antwoord1}}</option>
+                <option>{{vraag2[12].vraag2.antwoord2}} || {{nederlands[12].vraag2.antwoord2}}</option>
+                <option>{{vraag2[12].vraag2.antwoord3}} || {{nederlands[12].vraag2.antwoord3}}</option>
+              </select>
+              <input type="text" id="alcohol">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[12].vraag3.vraag1}} || {{nederlands[12].vraag3.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[12].vraag3.antwoord1}} || {{nederlands[12].vraag3.antwoord1}}</option>
+                <option>{{vraag2[12].vraag3.antwoord2}} || {{nederlands[12].vraag3.antwoord2}}</option>
+                <option>{{vraag2[12].vraag3.antwoord3}} || {{nederlands[12].vraag3.antwoord3}}</option>
+              </select>
+              <input type="text" id="drugs">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[12].vraag4.vraag1}} || {{nederlands[12].vraag4.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[12].vraag4.antwoord1}} || {{nederlands[12].vraag4.antwoord1}}</option>
+                <option>{{vraag2[12].vraag4.antwoord2}} || {{nederlands[12].vraag4.antwoord2}}</option>
+              </select>
+              <input type="text" id="gewrichtsprothese">
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            <td>
+              {{vraag2[13].vraag14}} || {{nederlands[13].vraag14}}
+            </td>
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              {{vraag2[13].vraag1.vraag1}} || {{nederlands[13].vraag1.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag1.antwoord1}} || {{nederlands[13].vraag1.antwoord1}}</option>
+                <option>{{vraag2[13].vraag1.antwoord2}} || {{nederlands[13].vraag1.antwoord2}}</option>
+              </select>
+              <input type="text" id="hygiene">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag2.vraag1}} || {{nederlands[13].vraag2.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag2.antwoord1}} || {{nederlands[13].vraag2.antwoord1}}</option>
+                <option>{{vraag2[13].vraag2.antwoord2}} || {{nederlands[13].vraag2.antwoord2}}</option>
+              </select>
+              <input type="text" id="mobiliteit">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag3.vraag1}} || {{nederlands[13].vraag3.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag3.antwoord1}} || {{nederlands[13].vraag3.antwoord1}}</option>
+                <option>{{vraag2[13].vraag3.antwoord2}} || {{nederlands[13].vraag3.antwoord2}}</option>
+              </select>
+              <input type="text" id="uitscheiding">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag4.vraag1}} || {{nederlands[13].vraag4.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag4.antwoord1}} || {{nederlands[13].vraag4.antwoord1}}</option>
+                <option>{{vraag2[13].vraag4.antwoord2}} || {{nederlands[13].vraag4.antwoord2}}</option>
+                <option>{{vraag2[13].vraag4.antwoord3}} || {{nederlands[13].vraag4.antwoord3}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag5.vraag1}} || {{nederlands[13].vraag5.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag5.antwoord1}} || {{nederlands[13].vraag5.antwoord1}}</option>
+                <option>{{vraag2[13].vraag5.antwoord2}} || {{nederlands[13].vraag5.antwoord2}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag6.vraag1}} || {{nederlands[13].vraag6.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag6.antwoord1}} || {{nederlands[13].vraag6.antwoord1}}</option>
+                <option>{{vraag2[13].vraag6.antwoord2}} || {{nederlands[13].vraag6.antwoord2}}</option>
+                <option>{{vraag2[13].vraag6.antwoord3}} || {{nederlands[13].vraag6.antwoord3}}</option>
+              </select>
+              <input type="text" id="dieet">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag7.vraag1}} || {{nederlands[13].vraag7.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag7.antwoord1}} || {{nederlands[13].vraag7.antwoord1}}</option>
+                <option>{{vraag2[13].vraag7.antwoord2}} || {{nederlands[13].vraag7.antwoord2}}</option>
+                <option>{{vraag2[13].vraag7.antwoord3}} || {{nederlands[13].vraag7.antwoord3}}</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{vraag2[13].vraag8.vraag1}} || {{nederlands[13].vraag8.vraag1}}
+            </td>
+            <td>
+              <select>
+                <option>{{vraag2[13].vraag8.antwoord1}} || {{nederlands[13].vraag8.antwoord1}}</option>
+                <option>{{vraag2[13].vraag8.antwoord2}} || {{nederlands[13].vraag8.antwoord2}}</option>
+                <option>{{vraag2[13].vraag8.antwoord3}} || {{nederlands[13].vraag8.antwoord3}}</option>
+                <option>{{vraag2[13].vraag8.antwoord4}} || {{nederlands[13].vraag8.antwoord4}}</option>
+              </select>
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            <td>
+              {{vraag2[14].vraag15}} || {{nederlands[14].vraag15}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag15overlopen"> Volledig overlopen
+            </td>
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              {{vraag2[14].vraag1.vraag1}}
+              <br/>
+              {{nederlands[14].vraag1.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag1"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br/>
+              {{vraag2[14].vraag2.vraag1}}
+              <br/>
+              {{nederlands[14].vraag2.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag2"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br/>
+              {{vraag2[14].vraag3.vraag1}} <input type="text" id="vraag14vraag3text">
+              <br/>
+              {{nederlands[14].vraag3.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag3"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br/>
+              {{vraag2[14].vraag4.vraag1}}
+              <br/>
+              {{nederlands[14].vraag4.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag4"> ja
+              <br/>
+              <select>
+                <option>{{vraag2[14].vraag4.antwoord1.antwoord1}} || {{nederlands[14].vraag4.antwoord1.antwoord1}}
+                </option>
+                <option>{{vraag2[14].vraag4.antwoord1.antwoord2}} || {{nederlands[14].vraag4.antwoord1.antwoord2}}
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br/>
+              {{nederlands[14].vraag5.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag5"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br/>
+              {{nederlands[14].vraag6.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag6"> ja
+            </td>
+          </tr>
+        </div>
+        <div class="answerDiv">
+          <tr>
+            <td>
+              {{nederlands[14].vraag7.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag7"> ja
+            </td>
+            &emsp;
+            &emsp;
+            <td>
+              {{nederlands[14].vraag8.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag8"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{nederlands[14].vraag9.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag9"> ja
+            </td>
+            &emsp;
+            &emsp;
+            <td>
+              {{nederlands[14].vraag10.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag10"> ja
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{nederlands[14].vraag11.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag11"> ja
+            </td>
+            &emsp;
+            &emsp;
+            <td>
+              {{nederlands[14].vraag12.vraag1}}
+            </td>
+            <td>
+              <input type="checkbox" id="vraag14vraag12"> ja
+            </td>
+          </tr>
+        </div>
+        <div class="QuestionDiv">
+          <tr>
+            <td>
+              {{nederlands[15].vraag16}}
+            </td>
+          </tr>
+        </div>
+        <div class="divbijzonderheden">
+          <textarea type="text" class="bijzonderhedenText"></textarea>
+        </div>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <table>
+      <th class="thheader">
+        Kolom voorbehouden voor de <b>vroedvrouwen</b>
+      </th>
+      <tbody class="mainbody2">
+      <tr>
+        Diagnose / ingreep
         <br>
-      </div>
-    </tr>
-  </table>
+        <br>
+        Datum ingreep:<br> <input type="text" maxlength="2" style="width: 25px;">/<input type="text" maxlength="2"
+                                                                                         style="width: 25px;">/20<input
+        type="text" maxlength="2" style="width: 25px;">
+        <br>
+      </tr>
+      <tr>
+        <td style="height: 525px">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px">
+          Op te volgen?
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 160px;">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px">
+          Bloedgroepkaart
+          <br>
+          gezien / ontvangen?
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 75px;">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px;">
+          <b>kleur gecodeerd polsbandje:</b>
+          <br>
+          groen
+          <br>
+          blauw
+          <br>
+          <br>
+          indien één van de rode items werd aangekruist en de reactie binnen 1 uur optrad is er anafylactie geweest.
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 135px;">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px;">
+          Wie 's nachts verwittigen?
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 95px">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px;">
+          Ontslagmanagement
+          <br>
+          <br>
+          Sociaal medewerker
+          <br>
+          verwittigen
+        </td>
+      </tr>
+
+      <tr>
+        <td style="height: 400px">
+
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 35px">
+          <input type="checkbox"> op spoed gescreend
+          <br>
+          Indien één van de roze items werd aangeduid:
+          roze wisser gebruiken en gram-negatieven en MRSA aanduiden op labo bon.
+          <br>
+          <b>SCREENEN EN DADELIJK ISOLEREN:</b>
+          <br>
+          <input type="checkbox"> Verbleef in buitenlands ziekenhuis
+          <br>
+          <input type="checkbox"> Woont in buitenland en heeft een infectie
+        </td>
+      </tr>
+      <tr>
+        <td style="height: 680px">
+               &emsp;
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
+
+<div class="col-xs-5 left">
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="">
+      <th class="thheaderbot">
+        Deze vragenlijst word zorgvuldig ingevuld:
+      </th>
+      </thead>
+      <tbody class="tablebot">
+      <tr>
+        <input type="checkbox"> met hulp van huisarts <input type="checkbox"> met hulp van familie
+      </tr>
+      <tr>
+        <input type="checkbox"> zelfstandig <input type="checkbox"> andere: <input type="text">
+      </tr>
+      <tr>
+        datum opmaak van de vragenlijkst: <input type="text" maxlength="2" style="width: 25px">/<input type="text"
+                                                                                                       maxlength="2"
+                                                                                                       style="width: 25px">/'<input
+        type="text" maxlength="2" style="width: 25px">
+      </tr>
+      <tr>
+        <b>naam en handtekening</b> &emsp; <input type="text" style="width: 150px">
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-xs-5 right">
+  <div class="table-responsive">
+    <table class="table tablebot">
+      <thead>
+      <th class="thheaderbot">
+        Voor de vroedvrouw die u opneemt:
+      </th>
+      </thead>
+      <tbody>
+      <tr>
+        <input type="checkbox"> vragenlijst werd volledig overlopen met patiënt
+      </tr>
+      <tr>
+        datum <input type="text" maxlength="2" style="width: 25px">/<input type="text" maxlength="2"
+                                                                           style="width: 25px">/'<input type="text"
+                                                                                                        maxlength="2"
+                                                                                                        style="width: 25px">
+      </tr>
+      <tr>
+        <input type="checkbox"> <b>naam vroedvrouw</b> (voluit schrijven): <input type="text">
+      </tr>
+      <tr>
+        <input type="checkbox"> afdeling: <input type="text" style="width: 100px">
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<button (click)="download()">
+  PDF
+</button>
+
+       TEST
+
+<div id="test">
+  Test me here i want to test things here
+  WTF IS DIT
+</div>
+TEST
+<button (click)="print()">
+  PRINT
+</button>

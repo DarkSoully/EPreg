@@ -1,18 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+.bodydiv {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+
 .QuestionDiv {
-  background-color: antiquewhite;
-  margin-left:15px;
-  margin-right:15px;
-  height: 100%;
+  float: left;
+  background-color: lightgreen;
   width: 100%;
-  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .answerDiv {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
 
-  margin-left:15px;
-  margin-bottom: 10px;
-  margin-top:10px;
+
+#rcorners1 {
+  border-collapse: collapse;
+  border-radius: 25px;
+  background: cornflowerblue;
+  color:white;
+}
+.inleiding {
+  box-sizing: border-box;
+  margin-top:35px;
+  vertical-align: middle;
+  margin-bottom: 35px;
+}
+.maintr {
+  padding:25px;
+}
+
+.thheader {
+  background-color: darkolivegreen;
+  color: white;
+  vertical-align: middle;
   text-align: center;
+  border-radius: 15px 15px 0 0 ;
+  height: 75px;
+}
+.mainbody {
+  border: 1px solid darkolivegreen;
+  border-collapse: collapse;
+}
+.emptyinputvroed {
+  width:  100%;
+  height: 50px;
+}
+.tableintable {
+  vertical-align: middle;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px 0;
+}
+.bevallingen, th {
+  border-radius: 15px 15px 0 0 ;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  height:40px;
+  font-weight: bold;
+}
+.tableintablebody {
+  text-align: center;
+  vertical-align: center;
   width: 100%;
 }
+
+.divbijzonderheden {
+  width: 100%;
+  height: 70%;
+}
+
+.bijzonderhedenText {
+  rows: 50;
+  height: 500px;
+  width: 90%;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+.thheaderbot {
+  background-color: darkolivegreen;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 15px 15px 0 0 ;
+  height: 50px;
+}
+
+.mainbody2 {
+  border: 1px solid darkolivegreen;
+  border-collapse: collapse;
+  font-size: small;
+}
+

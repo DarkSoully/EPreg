@@ -1,4 +1,8 @@
-import {Component, ViewChild, AfterViewInit, ElementRef, OnInit} from '@angular/core';
+import {Component, OnInit, style} from '@angular/core';
+import { Engels } from '../../Engels';
+import {Duits} from "../../Duits";
+import {Nederlands} from "../../Nederlands";
+import * as $ from '';
 
 @Component({
   selector: 'app-root',
@@ -6,40 +10,50 @@ import {Component, ViewChild, AfterViewInit, ElementRef, OnInit} from '@angular/
   styleUrls: ['./app.component.css']
 })
 export class AppComponent extends OnInit {
+  allergiecheck: boolean;
   language:any;
-  vraag2 = this.engels;
-  nederlands: any[] = [
-{vraag: "Voor wat wordt u opgenomen?", antwoord1: "bevalling", antwoord2: "keizersnede", antwoord3: "observatie zwangerschap"},
-    {vraag: "Wenst u een verzorgingsset voor de baby (zeep, badolie,...)?", antwoord1: "ja", antwoord2: "Neen, ik breng zelf verzorgingsproducten mee"},
-    {vraag: "Neen, ik breng zelf verzorgingsproducten mee", antwoord1: "Ja", antwoord2: "Neen, ik ga flesvoeding geven."}
-];
-
-  engels:any[] = [
-    {vraag: "What is the reason of your admission?", antwoord1: "Birth", antwoord2: "Caesarean section", antwoord3: "Observation of pregnancy"},
-    {vraag: "Do you want to get a care set for your baby? (soap, bath oil, …)", antwoord1: "Yes, I want.", antwoord2: "No, I will bring a set with me."},
-    {vraag: "Are you going to breastfeed?", antwoord1: "Yes, I will.", atnwoord2: "No, I will bottle feed my baby."}
-  ];
-  duits:any[] = [
-    {vraag: "Wofür werden Sie aufgenommen?", antwoord1: "Geburt" , antwoord2: "Keiserschnitt", antwoord3: "Überwachung der Schwangerschaft"},
-{vraag: "Wünschen Sie ein Pflegeset für das Baby (Seife, Badeöl,...)?", antwoord1: "ja", antwoord2: "Nein, ich bringe selber Pflegeprodukte mit."},
-    {vraag:"Werden Sie stillen?", antwoord1: "ja", antwoord2: "Nein, ich werde die Flasche geben."}
-  ];
+  eng = new Engels();
+  vraag2 = this.eng.getAll();
+  duits = new Duits();
+  vraag1 = new Nederlands();
+  nederlands = this.vraag1.getAll();
+  nederlandsantwoord = this.vraag1.getAntwoord();
   ngOnInit() {
-    this.vraag2 = this.engels;
+    this.vraag2 = this.eng.getAll();
+    console.log(this.vraag2);
+    console.log(this.nederlands);
+    console.log(this.nederlandsantwoord)
   }
 
   taal(taal) {
     this.language = taal;
-    console.log(this.vraag2);
 
     if (this.language == "duits") {
-      this.vraag2 = this.duits;
-      console.log(this.vraag2);
+      this.vraag2 = this.duits.getAll();
     } else if (this.language == "english") {
-      this.vraag2 = this.engels;
-      console.log(this.vraag2);
+      this.vraag2 = this.eng.getAll();
 
     }
+  }
+
+  download() {
+    // Open used in new window
+    let data = document.getElementById("everything")[0].innerHTML;
+    let newWindow = window.open("data:text/html," + encodeURIComponent(data),
+      "_blank");
+    newWindow.focus();
+  }
+
+  print(): void {
+    let printContents, popupWin;
+    let print = $('<div/>').append($(elem).clone()).html();
+
+    printContents = document.getElementById('everything').innerHTML;
+    console.log(printContents);
+    popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+    popupWin.document.open();
+    popupWin.document.write(printContents);
+    popupWin.document.close();
   }
 
 
