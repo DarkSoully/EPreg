@@ -2,13 +2,13 @@ import {Component, OnInit, style} from '@angular/core';
 import { Engels } from '../../Engels';
 import {Duits} from "../../Duits";
 import {Nederlands} from "../../Nederlands";
-import * as $ from '';
+var html2canvas = require('html2canvas');
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
+
 export class AppComponent extends OnInit {
   allergiecheck: boolean;
   language:any;
@@ -46,15 +46,21 @@ export class AppComponent extends OnInit {
 
   print(): void {
     let printContents, popupWin;
-    let print = $('<div/>').append($(elem).clone()).html();
 
     printContents = document.getElementById('everything').innerHTML;
-    console.log(printContents);
-    popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
-    popupWin.document.open();
-    popupWin.document.write(printContents);
-    popupWin.document.close();
+    /*
+     console.log(printContents);
+     popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+     popupWin.document.open();
+     popupWin.document.write(printContents);
+     popupWin.document.close();
+     */
+    html2canvas(document.getElementById('everything'), {
+      onrendered: function (canvas) {
+        var img = canvas.toDataURL()
+        window.open(img);
+      }
+    });
+
   }
-
-
 }

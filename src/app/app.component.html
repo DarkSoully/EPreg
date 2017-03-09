@@ -5,8 +5,14 @@
   <option value="english">English</option>
   <option value="duits">Duits</option>
 </select>
+
+<button (click)="print()">
+  PRINT
+</button>
+
 <button (click)="taal(languages.value);">Go</button>
 <div class="bodydiv row" id="everything">
+
   <div class="col-md-12 inleiding">
     <table id="rcorners1">
       <tr>
@@ -1047,6 +1053,4 @@
   WTF IS DIT
 </div>
 TEST
-<button (click)="print()">
-  PRINT
-</button>
+
