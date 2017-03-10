@@ -3,6 +3,8 @@ import { Engels } from '../../Engels';
 import {Duits} from "../../Duits";
 import {Nederlands} from "../../Nederlands";
 var html2canvas = require('html2canvas');
+var speak = require('browser-speak');
+var  BDSSpeechSynthesizer = require('baidu-speech-synthesizer');
 
 @Component({
   selector: 'app-root',
@@ -36,12 +38,10 @@ export class AppComponent extends OnInit {
     }
   }
 
-  download() {
-    // Open used in new window
-    let data = document.getElementById("everything")[0].innerHTML;
-    let newWindow = window.open("data:text/html," + encodeURIComponent(data),
-      "_blank");
-    newWindow.focus();
+  download(text) {
+    let bss = new BDSSpeechSynthesizer({per: 2});
+    bss.speak(text);
+
   }
 
   print(): void {
@@ -63,4 +63,8 @@ export class AppComponent extends OnInit {
     });
 
   }
+
+
+
+
 }

@@ -6,11 +6,13 @@
   <option value="duits">Duits</option>
 </select>
 
+
+
+<button (click)="taal(languages.value);">Go</button>
+
 <button (click)="print()">
   PRINT
 </button>
-
-<button (click)="taal(languages.value);">Go</button>
 <div class="bodydiv row" id="everything">
 
   <div class="col-md-12 inleiding">
@@ -52,6 +54,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[0].vraag1}} || {{nederlands[0].vraag1}}
+            <button class="butt js--triggerAnimation" onclick='responsiveVoice.speak((vraag2[0].vraag1).value);'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
 
@@ -982,75 +986,63 @@
     </table>
   </div>
 
-</div>
 
-<div class="col-xs-5 left">
-  <div class="table-responsive">
-    <table class="table">
-      <thead class="">
-      <th class="thheaderbot">
-        Deze vragenlijst word zorgvuldig ingevuld:
-      </th>
-      </thead>
-      <tbody class="tablebot">
-      <tr>
-        <input type="checkbox"> met hulp van huisarts <input type="checkbox"> met hulp van familie
-      </tr>
-      <tr>
-        <input type="checkbox"> zelfstandig <input type="checkbox"> andere: <input type="text">
-      </tr>
-      <tr>
-        datum opmaak van de vragenlijkst: <input type="text" maxlength="2" style="width: 25px">/<input type="text"
-                                                                                                       maxlength="2"
-                                                                                                       style="width: 25px">/'<input
-        type="text" maxlength="2" style="width: 25px">
-      </tr>
-      <tr>
-        <b>naam en handtekening</b> &emsp; <input type="text" style="width: 150px">
-      </tr>
-      </tbody>
-    </table>
+  <div class="col-xs-5 left">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="">
+        <th class="thheaderbot">
+          Deze vragenlijst word zorgvuldig ingevuld:
+        </th>
+        </thead>
+        <tbody class="tablebot">
+        <tr>
+          <input type="checkbox"> met hulp van huisarts <input type="checkbox"> met hulp van familie
+        </tr>
+        <tr>
+          <input type="checkbox"> zelfstandig <input type="checkbox"> andere: <input type="text">
+        </tr>
+        <tr>
+          datum opmaak van de vragenlijkst: <input type="text" maxlength="2" style="width: 25px">/<input type="text"
+                                                                                                         maxlength="2"
+                                                                                                         style="width: 25px">/'<input
+          type="text" maxlength="2" style="width: 25px">
+        </tr>
+        <tr>
+          <b>naam en handtekening</b> &emsp; <input type="text" style="width: 150px">
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-<div class="col-xs-5 right">
-  <div class="table-responsive">
-    <table class="table tablebot">
-      <thead>
-      <th class="thheaderbot">
-        Voor de vroedvrouw die u opneemt:
-      </th>
-      </thead>
-      <tbody>
-      <tr>
-        <input type="checkbox"> vragenlijst werd volledig overlopen met patiënt
-      </tr>
-      <tr>
-        datum <input type="text" maxlength="2" style="width: 25px">/<input type="text" maxlength="2"
-                                                                           style="width: 25px">/'<input type="text"
-                                                                                                        maxlength="2"
-                                                                                                        style="width: 25px">
-      </tr>
-      <tr>
-        <input type="checkbox"> <b>naam vroedvrouw</b> (voluit schrijven): <input type="text">
-      </tr>
-      <tr>
-        <input type="checkbox"> afdeling: <input type="text" style="width: 100px">
-      </tr>
-      </tbody>
-    </table>
+  <div class="col-xs-5 right">
+    <div class="table-responsive">
+      <table class="table tablebot">
+        <thead>
+        <th class="thheaderbot">
+          Voor de vroedvrouw die u opneemt:
+        </th>
+        </thead>
+        <tbody>
+        <tr>
+          <input type="checkbox"> vragenlijst werd volledig overlopen met patiënt
+        </tr>
+        <tr>
+          datum <input type="text" maxlength="2" style="width: 25px">/<input type="text" maxlength="2"
+                                                                             style="width: 25px">/'<input type="text"
+                                                                                                          maxlength="2"
+                                                                                                          style="width: 25px">
+        </tr>
+        <tr>
+          <input type="checkbox"> <b>naam vroedvrouw</b> (voluit schrijven): <input type="text">
+        </tr>
+        <tr>
+          <input type="checkbox"> afdeling: <input type="text" style="width: 100px">
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+  <button (click)="download()">Spreken</button>
 </div>
-
-
-<button (click)="download()">
-  PDF
-</button>
-
-       TEST
-
-<div id="test">
-  Test me here i want to test things here
-  WTF IS DIT
-</div>
-TEST
 
