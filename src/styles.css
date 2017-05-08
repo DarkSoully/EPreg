@@ -107,3 +107,27 @@
   font-size: small;
 }
 
+.anamnese {
+  color: cornflowerblue;
+  font-size: 35px;
+}
+.imagejessa {
+  width: inherit;
+  height: 75%;
+}
+.topdiv {
+  height: 15%;
+  width: 50%;
+}
+
+.patientbox {
+  height: 250px;
+  width: 100%;
+  border: solid black 1pt;
+}
+
+.inputpatiendetail {
+  height: 100%;
+  width: 100%;
+}
+

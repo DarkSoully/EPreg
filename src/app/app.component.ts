@@ -22,9 +22,6 @@ export class AppComponent extends OnInit {
   nederlandsantwoord = this.vraag1.getAntwoord();
   ngOnInit() {
     this.vraag2 = this.eng.getAll();
-    console.log(this.vraag2);
-    console.log(this.nederlands);
-    console.log(this.nederlandsantwoord)
   }
 
   taal(taal) {

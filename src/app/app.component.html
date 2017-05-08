@@ -14,6 +14,20 @@
   PRINT
 </button>
 <div class="bodydiv row" id="everything">
+  <div class="col-xs-6 topdiv">
+    <img src="../assets/img/jessalogo.png" class="imagejessa">
+    <div class="anamnese"><p>
+      <b>ANAMNESE</b> VOOR <b>OPNAME</b>
+    </p><p>
+      OP DE <b>KRAAMAFDELING</b>
+    </p>
+    </div>
+  </div>
+  <div class="col-xs-6 topdiv">
+    <div class="patientbox">
+      <textarea class="inputpatiendetail"></textarea>
+    </div>
+  </div>
 
   <div class="col-md-12 inleiding">
     <table id="rcorners1">
@@ -54,7 +68,7 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[0].vraag1}} || {{nederlands[0].vraag1}}
-            <button class="butt js--triggerAnimation" onclick='responsiveVoice.speak((vraag2[0].vraag1).value);'
+            <button (click)='download(vraag2[0].vraag1)'
                     type="button" value="Play">Play</button>
           </div>
         </tr>
@@ -73,6 +87,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[1].vraag2}} || ({{nederlands[1].vraag2}})
+            <button (click)='download(vraag2[1].vraag2)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -87,6 +103,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[2].vraag3}} || ({{nederlands[2].vraag3}})
+            <button (click)='download(vraag2[2].vraag3)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -101,6 +119,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[3].vraag4}} || ({{nederlands[3].vraag4}})
+            <button (click)='download(vraag2[3].vraag4)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -116,6 +136,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[4].vraag5}} || ({{nederlands[4].vraag5}})
+            <button (click)='download(vraag2[4].vraag5)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -297,6 +319,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[6].vraag7}} || {{nederlands[6].vraag7}}
+            <button (click)='download(vraag2[6].vraag7)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -332,6 +356,8 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[7].vraag8}} || {{nederlands[7].vraag8}}
+            <button (click)='download(vraag2[7].vraag8)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <tr>
@@ -367,6 +393,8 @@
         <div class="QuestionDiv">
           <tr>
             {{vraag2[8].vraag9}} || {{nederlands[8].vraag9}}
+            <button (click)='download(vraag2[8].vraag9)'
+                    type="button" value="Play">Play</button>
           </tr>
         </div>
         <tr>
@@ -377,7 +405,7 @@
                   {{vraag2[8].vraag1.vraag1}} || {{nederlands[8].vraag1}}
                 </td>
                 <td>
-                  voor de zwangerschap: <input type="text" id="voorzwagKg"> kg
+                  voor de zwangerschap: <input type="text" id="voorzwagKg"> kg  &emsp;
                 </td>
                 <td>
                   huidig gewicht: <input type="text" id="Kg"> kg
@@ -424,11 +452,14 @@
         <tr>
           <div class="QuestionDiv">
             {{vraag2[9].vraag10.vraag1}} || {{nederlands[9].vraag10.vraag1}}
+            <button (click)='download(vraag2[9].vraag10)'
+                    type="button" value="Play">Play</button>
           </div>
         </tr>
         <div class="answerDiv" *ngIf="!allergiecheck">
           <tr>
             <td>
+              <label>Van Toepassing</label>
               <select>
                 <option>ja</option>
                 <option>neen</option>
@@ -504,6 +535,8 @@
         <div class="QuestionDiv">
           <tr>
             {{vraag2[10].vraag11}} || {{nederlands[10].vraag11}}
+            <button (click)='download(vraag2[10].vraag11)'
+                    type="button" value="Play">Play</button>
           </tr>
         </div>
         <div class="answerDiv">
@@ -536,6 +569,8 @@
           <tr>
             <td>
               {{vraag2[11].vraag12}} || {{nederlands[11].vraag12}}
+              <button (click)='download(vraag2[11].vraag12)'
+                      type="button" value="Play">Play</button>
             </td>
           </tr>
         </div>
@@ -566,6 +601,8 @@
           <tr>
             <td>
               {{vraag2[12].vraag13}} || {{nederlands[12].vraag13}}
+              <button (click)='download(vraag2[12].vraag13)'
+                      type="button" value="Play">Play</button>
             </td>
           </tr>
         </div>
@@ -631,6 +668,8 @@
           <tr>
             <td>
               {{vraag2[13].vraag14}} || {{nederlands[13].vraag14}}
+              <button (click)='download(vraag2[13].vraag14)'
+                      type="button" value="Play">Play</button>
             </td>
           </tr>
         </div>
@@ -737,6 +776,8 @@
           <tr>
             <td>
               {{vraag2[14].vraag15}} || {{nederlands[14].vraag15}}
+              <button (click)='download(vraag2[14].vraag15)'
+                      type="button" value="Play">Play</button>
             </td>
             <td>
               <input type="checkbox" id="vraag15overlopen"> Volledig overlopen
@@ -794,81 +835,6 @@
               </select>
             </td>
           </tr>
-          <tr>
-            <td>
-              <br/>
-              {{nederlands[14].vraag5.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag5"> ja
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <br/>
-              {{nederlands[14].vraag6.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag6"> ja
-            </td>
-          </tr>
-        </div>
-        <div class="answerDiv">
-          <tr>
-            <td>
-              {{nederlands[14].vraag7.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag7"> ja
-            </td>
-            &emsp;
-            &emsp;
-            <td>
-              {{nederlands[14].vraag8.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag8"> ja
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{nederlands[14].vraag9.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag9"> ja
-            </td>
-            &emsp;
-            &emsp;
-            <td>
-              {{nederlands[14].vraag10.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag10"> ja
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {{nederlands[14].vraag11.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag11"> ja
-            </td>
-            &emsp;
-            &emsp;
-            <td>
-              {{nederlands[14].vraag12.vraag1}}
-            </td>
-            <td>
-              <input type="checkbox" id="vraag14vraag12"> ja
-            </td>
-          </tr>
-        </div>
-        <div class="QuestionDiv">
-          <tr>
-            <td>
-              {{nederlands[15].vraag16}}
-            </td>
-          </tr>
         </div>
         <div class="divbijzonderheden">
           <textarea type="text" class="bijzonderhedenText"></textarea>
@@ -904,7 +870,7 @@
         </td>
       </tr>
       <tr>
-        <td style="height: 160px;">
+        <td style="height: 180px;">
 
         </td>
       </tr>
@@ -916,12 +882,12 @@
         </td>
       </tr>
       <tr>
-        <td style="height: 75px;">
+        <td style="height: 125px;">
 
         </td>
       </tr>
       <tr>
-        <td style="height: 35px;">
+        <td style="height: 50px;">
           <b>kleur gecodeerd polsbandje:</b>
           <br>
           groen
@@ -933,7 +899,7 @@
         </td>
       </tr>
       <tr>
-        <td style="height: 135px;">
+        <td style="height: 175px;">
 
         </td>
       </tr>
@@ -959,7 +925,7 @@
       </tr>
 
       <tr>
-        <td style="height: 400px">
+        <td style="height: 425px">
 
         </td>
       </tr>
@@ -978,7 +944,7 @@
         </td>
       </tr>
       <tr>
-        <td style="height: 680px">
+        <td style="height: 505px">
                &emsp;
         </td>
       </tr>
@@ -1043,6 +1009,5 @@
       </table>
     </div>
   </div>
-  <button (click)="download()">Spreken</button>
 </div>
 
