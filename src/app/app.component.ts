@@ -3,6 +3,7 @@ import { Engels } from '../../Engels';
 import {Duits} from "../../Duits";
 import {Nederlands} from "../../Nederlands";
 import {Arabische} from "../../Arabische";
+import {Russisch} from "../../Russisch";
 var html2canvas = require('html2canvas');
 var speak = require('browser-speak');
 var  BDSSpeechSynthesizer = require('baidu-speech-synthesizer');
@@ -15,6 +16,7 @@ var  BDSSpeechSynthesizer = require('baidu-speech-synthesizer');
 export class AppComponent extends OnInit {
   allergiecheck: boolean;
   language:any;
+  rus = new Russisch();
   eng = new Engels();
   arab = new Arabische();
   vraag2 = this.eng.getAll();
@@ -36,7 +38,10 @@ export class AppComponent extends OnInit {
       this.vraag2 = this.eng.getAll();
     } else if (this.language == "arabische") {
       this.vraag2 = this.arab.getAll();
+    } else if(this.language == "russisch") {
+      this.vraag2 = this.rus.getAll();
     }
+
   }
 
   download(text) {
